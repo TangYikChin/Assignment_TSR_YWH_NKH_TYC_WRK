@@ -8,5 +8,6 @@ public class limited_class extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.limited_product);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

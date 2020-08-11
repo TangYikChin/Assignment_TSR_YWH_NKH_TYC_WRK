@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShopListActivity"></activity>
-        <activity android:name=".Login"></activity>
-        <activity android:name=".Register"></activity>
+        <activity android:name=".ElectronicDeviceActivity"
+            android:parentActivityName=".ShopListActivity"></activity>
+        <activity android:name=".HealthCareActivity"
+            android:parentActivityName=".ShopListActivity"/>
+        <activity android:name=".ClothedActivity"
+            android:parentActivityName=".ShopListActivity"/>
+        <activity android:name=".ShopListActivity" />
+        <activity android:name=".Login" />
+        <activity android:name=".Register" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".limited_class" />
+        <activity android:name=".limited_class"
+            android:parentActivityName=".ShopListActivity"/>
     </application>
 
 </manifest>

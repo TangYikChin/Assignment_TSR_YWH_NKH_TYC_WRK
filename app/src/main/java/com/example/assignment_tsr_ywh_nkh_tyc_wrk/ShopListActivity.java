@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.List;
 public class ShopListActivity extends AppCompatActivity {
 
     private Spinner spinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,18 @@ public class ShopListActivity extends AppCompatActivity {
                 else {
                     if (parent.getItemAtPosition(position).equals("Limited Product")) {
                         Intent intent = new Intent(ShopListActivity.this, limited_class.class);
+                        startActivity(intent);
+                    }
+                    if (parent.getItemAtPosition(position).equals("Clothed")){
+                        Intent intent = new Intent(ShopListActivity.this, ClothedActivity.class);
+                        startActivity(intent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Health Care")){
+                        Intent intent = new Intent(ShopListActivity.this, HealthCareActivity.class);
+                        startActivity(intent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Electronic Device")){
+                        Intent intent = new Intent(ShopListActivity.this, ElectronicDeviceActivity.class);
                         startActivity(intent);
                     }
 

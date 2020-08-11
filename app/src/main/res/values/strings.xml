@@ -13,4 +13,8 @@
     <string name="order">order</string>
     <string name="acc">acc</string>
     <string name="product_list">Product List</string>
+    <string name="limited_product">Limited Product</string>
+    <string name="health_care">Health Care</string>
+    <string name="electronic_device">Electronic Device</string>
+    <string name="clothed">Clothed</string>
 </resources>
