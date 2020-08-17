@@ -2,23 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <Spinner
-        android:id="@+id/product_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:background="#FFEB3B"
-        android:hint="@string/product_list"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</LinearLayout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/product_list"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="4dp"
+            android:background="#FFEB3B"
+            android:hint="@string/product_list"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/limited_product"
+            app:srcCompat="@drawable/mask1" />
+
+        <TextView
+            android:id="@+id/mask1"
+            android:layout_width="147dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="-2dp"
+            android:text="@string/_3_ply_face_mask_50_pcs_box" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="147dp"
+            android:layout_height="30dp"
+            android:text="@string/rm10_05" />
+    </LinearLayout>
+
+    </LinearLayout>
+
