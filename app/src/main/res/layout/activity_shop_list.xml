@@ -23,30 +23,138 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="32dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/limited_product"
-            app:srcCompat="@drawable/mask1" />
 
-        <TextView
-            android:id="@+id/mask1"
-            android:layout_width="147dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="-2dp"
-            android:text="@string/_3_ply_face_mask_50_pcs_box" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="147dp"
-            android:layout_height="30dp"
-            android:text="@string/rm10_05" />
+            <TextView
+                android:id="@+id/mask1"
+                android:layout_width="152dp"
+                android:layout_height="31dp"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/_3_ply_face_mask_50_pcs_box" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="152dp"
+                android:layout_height="29dp"
+                android:layout_below="@+id/mask1"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/price_Mask1" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="32dp"
+                app:srcCompat="@drawable/mask2" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="148dp"
+                android:layout_height="31dp"
+                android:layout_below="@id/imageView2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="34dp"
+                android:text="@string/Bareno_3_ply_face_mask_50pcs_box" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="17dp"
+                app:srcCompat="@drawable/mask1" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="149dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="34dp"
+                android:text="@string/price_Mask2" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="19dp"
+                app:srcCompat="@drawable/clothed" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="152dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/imageView3"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/clothed1" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="152dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="34dp"
+                android:text="@string/price_clothed" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="34dp"
+                app:srcCompat="@drawable/clothed1" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/imageView4"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="34dp"
+                android:text="@string/clothed2" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="152dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="34dp"
+                android:text="@string/price_clothed2" />
+
+
+        </RelativeLayout>
+
     </LinearLayout>
 
-    </LinearLayout>
+</LinearLayout>
 
