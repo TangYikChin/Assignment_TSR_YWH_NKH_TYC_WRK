@@ -34,4 +34,12 @@
     <string name="price_eletronic3">RM1874.00</string>
     <string name="healthcare3">Blackmores Vitamin C 500 60s x 2</string>
     <string name="price_healthcare3">RM49.00</string>
+    <string name="clothed3">Women Spring Body Reflective Cotton Streetwear</string>
+    <string name="price_clothed3">RM18.80</string>
+    <string name="limitedproduct">HUAWEI NOVA 7I 8GB + 128GB Smartphone</string>
+    <string name="price_limited_product">RM1099.00</string>
+    <string name="limitedproduct2">Apple iPhone 11 Pro Max 64GB</string>
+    <string name="price_limited_product2">RM4703.02</string>
+    <string name="limitedproduct3">Nintendo Switch V2 Battery Enhanced Console / Neon Blue/Red Set and Gray Joy‑Con Set</string>
+    <string name="price_limited_product3">RM1629.00</string>
 </resources>
