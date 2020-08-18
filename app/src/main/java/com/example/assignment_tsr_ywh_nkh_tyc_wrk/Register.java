@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Register extends AppCompatActivity {
 
     Button bRegister;
-    EditText etUsername, etAge, etEmail, etPassword, etConfirmPassword;
+    EditText etUsername, etEmail, etPassword, etConfirmPassword, etPhone;
     FirebaseAuth fAuth;
 
     @Override
@@ -31,10 +31,11 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         bRegister = (Button) findViewById(R.id.bRegister);
         etUsername = (EditText) findViewById(R.id.etUsername);
-        etAge = (EditText) findViewById(R.id.etAge);
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         etConfirmPassword = (EditText) findViewById(R.id.etConfirmPassword);
+        etPhone = (EditText) findViewById(R.id.etPhone);
+
         fAuth = FirebaseAuth.getInstance();
 
         bRegister.setOnClickListener(new View.OnClickListener() {
@@ -42,9 +43,27 @@ public class Register extends AppCompatActivity {
             public void onClick(View view) {
                 String email = etEmail.getText().toString().trim();
                 String password = etPassword.getText().toString().trim();
+                String username = etUsername.getText().toString().trim();
+                String phone = etPhone.getText().toString().trim();
+
+
+                if (TextUtils.isEmpty(username)){
+                    etUsername.setError("Username is Required!");
+                    return;
+                }
 
                 if (TextUtils.isEmpty(email)){
                     etEmail.setError("Email is Required!");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(phone)){
+                    etPhone.setError("Phone Number is Required!");
+                    return;
+                }
+
+                if (phone.length() > 11 || phone.length() <10){
+                    etPhone.setError("Invalid Phone Format");
                     return;
                 }
 
