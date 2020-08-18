@@ -63,7 +63,7 @@
         app:srcCompat="@drawable/electricdevice1" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/ED2"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_below="@+id/imageView9"
@@ -73,10 +73,10 @@
         android:text="@string/electronic2" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/PED2"
         android:layout_width="150dp"
         android:layout_height="29dp"
-        android:layout_below="@+id/textView16"
+        android:layout_below="@+id/ED2"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
@@ -94,7 +94,7 @@
         app:srcCompat="@drawable/electricdevice3" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/ED3"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_below="@+id/imageView10"
@@ -104,10 +104,10 @@
         android:text="@string/electronic3" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/PED3"
         android:layout_width="150dp"
         android:layout_height="29dp"
-        android:layout_below="@+id/textView18"
+        android:layout_below="@+id/ED3"
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="0dp"

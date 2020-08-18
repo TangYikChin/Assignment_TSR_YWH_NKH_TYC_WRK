@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/limited1" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/LP"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_below="@+id/imageView13"
@@ -40,10 +40,10 @@
         android:text="@string/limitedproduct" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/PLD"
         android:layout_width="150dp"
         android:layout_height="29dp"
-        android:layout_below="@+id/textView22"
+        android:layout_below="@+id/LP"
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="0dp"
@@ -62,7 +62,7 @@
         app:srcCompat="@drawable/limitedproduct2" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/LP2"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_below="@+id/imageView14"
@@ -72,10 +72,10 @@
         android:text="@string/limitedproduct2" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/PLP2"
         android:layout_width="150dp"
         android:layout_height="29dp"
-        android:layout_below="@+id/textView24"
+        android:layout_below="@+id/LP2"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
@@ -85,7 +85,7 @@
         android:id="@+id/imageView16"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/textView23"
+        android:layout_below="@+id/PLD"
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="19dp"
@@ -93,7 +93,7 @@
         app:srcCompat="@drawable/limited3" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/LP3"
         android:layout_width="150dp"
         android:layout_height="54dp"
         android:layout_below="@+id/imageView16"
@@ -103,10 +103,10 @@
         android:text="@string/limitedproduct3" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/PLP3"
         android:layout_width="150dp"
         android:layout_height="29dp"
-        android:layout_below="@+id/textView26"
+        android:layout_below="@+id/LP3"
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="0dp"

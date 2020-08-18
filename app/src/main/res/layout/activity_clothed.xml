@@ -31,9 +31,9 @@
         app:srcCompat="@drawable/clothed" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="152dp"
-        android:layout_height="31dp"
+        android:id="@+id/CL"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/imageView6"
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
@@ -41,10 +41,10 @@
         android:text="@string/clothed1" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="152dp"
+        android:id="@+id/PCL"
+        android:layout_width="150dp"
         android:layout_height="29dp"
-        android:layout_below="@+id/textView8"
+        android:layout_below="@+id/CL"
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="0dp"
@@ -63,9 +63,9 @@
         app:srcCompat="@drawable/clothed1" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="152dp"
-        android:layout_height="31dp"
+        android:id="@+id/CL2"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/imageView7"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
@@ -73,10 +73,10 @@
         android:text="@string/clothed2" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/PCL2"
         android:layout_width="152dp"
         android:layout_height="27dp"
-        android:layout_below="@+id/textView12"
+        android:layout_below="@+id/CL2"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
@@ -86,7 +86,7 @@
         android:id="@+id/imageView12"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/textView11"
+        android:layout_below="@+id/PCL"
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="19dp"
@@ -94,7 +94,7 @@
         app:srcCompat="@drawable/clothed2" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/CL3"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_below="@+id/imageView12"
@@ -104,10 +104,10 @@
         android:text="@string/clothed3" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/PCL3"
         android:layout_width="150dp"
         android:layout_height="29dp"
-        android:layout_below="@+id/textView20"
+        android:layout_below="@+id/CL3"
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="0dp"
