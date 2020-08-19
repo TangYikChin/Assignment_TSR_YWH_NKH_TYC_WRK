@@ -42,4 +42,8 @@
     <string name="price_limited_product2">RM4703.02</string>
     <string name="limitedproduct3">Nintendo Switch V2 Battery Enhanced Console / Neon Blue/Red Set and Gray Joy‑Con Set</string>
     <string name="price_limited_product3">RM1629.00</string>
+    <string name="fb">SYNALLAGí Home Page</string>
+    <string name="email">SYNALLAGí@gmail.com</string>
+    <string name="about_us">About Us</string>
+    <string name="phone">03-1111-1111</string>
 </resources>
