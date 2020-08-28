@@ -10,7 +10,7 @@
     <string name="text_email">Email Address</string>
     <string name="button_log_out">Log Out</string>
     <string name="text_register_here">New here? Register Here</string>
-    <string name="order">order</string>
+    <string name="cart">Cart</string>
     <string name="acc">acc</string>
     <string name="product_list">Product List</string>
     <string name="limited_product">Limited Product</string>
@@ -47,4 +47,7 @@
     <string name="about_us">About Us</string>
     <string name="phone">03-1111-1111</string>
     <string name="feedback">Feedback</string>
+    <string name="user_account">User Account</string>
+    <string name="Open">NavBar</string>
+    <string name="Close">NavBar</string>
 </resources>
