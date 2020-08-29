@@ -2,56 +2,84 @@ package com.example.assignment_tsr_ywh_nkh_tyc_wrk;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.google.android.material.navigation.NavigationView;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity{
-    private DrawerLayout dl;
-    private ActionBarDrawerToggle ab;
+
+    Button bLogin;
+    EditText etEmail, etPassword;
+    TextView tvRegisterLink;
+    FirebaseAuth fAuth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        dl = (DrawerLayout)findViewById(R.id.dl);
-        ab = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
-        ab.setDrawerIndicatorEnabled(true);
 
-        dl.addDrawerListener(ab);
-        ab.syncState();
+        etEmail = (EditText) findViewById(R.id.etEmail);
+        etPassword = (EditText) findViewById(R.id.etPassword);
+        bLogin = (Button) findViewById(R.id.bLogin);
+        tvRegisterLink = (TextView) findViewById(R.id.tvRegisterLink);
+        fAuth = FirebaseAuth.getInstance();
 
-        final NavigationView nav_view =(NavigationView)findViewById(R.id.nav_view);
-
-        nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        bLogin.setOnClickListener(new View.OnClickListener(){
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                if (id == R.id.action_cart){
-                    Toast.makeText(MainActivity.this, "User Account", Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
 
+                String email = etEmail.getText().toString().trim();
+                String password = etPassword.getText().toString().trim();
+
+                if (TextUtils.isEmpty(email)){
+                    etEmail.setError("Email is Required!");
+                    return;
                 }
 
-                else if (id == R.id.user_account){
-                    Toast.makeText(MainActivity.this, "User Account", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, UserAcc.class);
+                if (TextUtils.isEmpty(password)){
+                    etPassword.setError("Password is Required!");
+                    return;
                 }
-                return true;
+
+                if (password.length() < 6){
+                    etPassword.setError("Password Must be More than 6 characters!");
+                    return;
+                }
+
+                fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(MainActivity.this, "User Login!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), Home.class));
+
+                        }
+
+                        else{
+                            Toast.makeText(MainActivity.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
 
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return super.onOptionsItemSelected(item) || ab.onOptionsItemSelected(item);
+        tvRegisterLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Register.class));
+            }
+        });
     }
 
 }
-

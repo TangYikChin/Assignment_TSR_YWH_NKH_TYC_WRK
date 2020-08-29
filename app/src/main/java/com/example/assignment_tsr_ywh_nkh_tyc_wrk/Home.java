@@ -2,6 +2,9 @@ package com.example.assignment_tsr_ywh_nkh_tyc_wrk;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,17 +15,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShopListActivity extends AppCompatActivity {
 
-    private Spinner spinner;
+public class Home extends AppCompatActivity{
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shop_list);
-
-        spinner = findViewById(R.id.product_list);
+        setContentView(R.layout.activity_home);
+        Spinner spinner = findViewById(R.id.product_list);
 
         List<String> product=new ArrayList<>();
         product.add(0,"Product List");
@@ -51,24 +52,23 @@ public class ShopListActivity extends AppCompatActivity {
                 }
                 else {
                     if (parent.getItemAtPosition(position).equals("Limited Product")) {
-                        Intent intent = new Intent(ShopListActivity.this, LimitedClass.class);
+                        Intent intent = new Intent(Home.this, LimitedClass.class);
                         startActivity(intent);
                     }
                     if (parent.getItemAtPosition(position).equals("Clothed")){
-                        Intent intent = new Intent(ShopListActivity.this, ClothedActivity.class);
+                        Intent intent = new Intent(Home.this, ClothedActivity.class);
                         startActivity(intent);
                     }
                     if(parent.getItemAtPosition(position).equals("Health Care")){
-                        Intent intent = new Intent(ShopListActivity.this, HealthCareActivity.class);
+                        Intent intent = new Intent(Home.this, HealthCareActivity.class);
                         startActivity(intent);
                     }
                     if(parent.getItemAtPosition(position).equals("Electronic Device")){
-                        Intent intent = new Intent(ShopListActivity.this, ElectronicDeviceActivity.class);
+                        Intent intent = new Intent(Home.this, ElectronicDeviceActivity.class);
                         startActivity(intent);
                     }
 
                 }
-
 
             }
 
@@ -76,8 +76,29 @@ public class ShopListActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
+
+
         });
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.optionalmenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.user_account){
+            startActivity(new Intent(getApplicationContext(), UserAcc.class));
+            return false;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }
