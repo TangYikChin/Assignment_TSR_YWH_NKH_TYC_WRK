@@ -11,4 +11,5 @@ public class ClothedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clothed);
     }
+    // Handle action bar item clicks here. The action bar will
 }
