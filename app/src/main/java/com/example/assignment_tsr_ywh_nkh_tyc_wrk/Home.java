@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -77,6 +78,7 @@ private Spinner spinner;
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -85,14 +87,16 @@ private Spinner spinner;
     }
 
     @Override
-    public boolean onOptionsItemSelected( MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.user_account){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+        case R.id.user_account:
             startActivity(new Intent(getApplicationContext(), UserAcc.class));
-            return false;
+            Toast.makeText(Home.this, "Please Work", Toast.LENGTH_SHORT).show();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 
 }

@@ -16,6 +16,7 @@
         <activity android:name=".HealthCareActivity"> </activity>
         <activity android:name=".ClothedActivity"> </activity>
         <activity android:name=".LimitedClass"> </activity>
+        <activity android:name=".UserAcc"> </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
