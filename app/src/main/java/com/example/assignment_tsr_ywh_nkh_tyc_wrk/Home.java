@@ -17,13 +17,13 @@ import java.util.List;
 
 
 public class Home extends AppCompatActivity{
-
+private Spinner spinner;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Spinner spinner = findViewById(R.id.product_list);
+        spinner = findViewById(R.id.product_list);
 
         List<String> product=new ArrayList<>();
         product.add(0,"Product List");
@@ -42,8 +42,6 @@ public class Home extends AppCompatActivity{
 
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(parent.getItemAtPosition(position).equals("Product List"))
@@ -52,20 +50,16 @@ public class Home extends AppCompatActivity{
                 }
                 else {
                     if (parent.getItemAtPosition(position).equals("Limited Product")) {
-                        Intent intent = new Intent(Home.this, LimitedClass.class);
-                        startActivity(intent);
+                        startActivity(new Intent(getApplicationContext(), LimitedClass.class));
                     }
                     if (parent.getItemAtPosition(position).equals("Clothed")){
-                        Intent intent = new Intent(Home.this, ClothedActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(getApplicationContext(), ClothedActivity.class));
                     }
                     if(parent.getItemAtPosition(position).equals("Health Care")){
-                        Intent intent = new Intent(Home.this, HealthCareActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(getApplicationContext(), HealthCareActivity.class));
                     }
                     if(parent.getItemAtPosition(position).equals("Electronic Device")){
-                        Intent intent = new Intent(Home.this, ElectronicDeviceActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(getApplicationContext(), ElectronicDeviceActivity.class));
                     }
 
                 }
