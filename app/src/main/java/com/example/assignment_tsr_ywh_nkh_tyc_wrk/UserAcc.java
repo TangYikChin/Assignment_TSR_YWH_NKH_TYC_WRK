@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class UserAcc extends AppCompatActivity {
     Button blogout;
     DatabaseReference reference;
     FirebaseAuth fAuth;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +34,13 @@ public class UserAcc extends AppCompatActivity {
         cgEmail = findViewById(R.id.cgEmail);
         cgPhone = findViewById(R.id.cgPhone);
         blogout = findViewById(R.id.blogout);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         fAuth = FirebaseAuth.getInstance();
-        reference = FirebaseDatabase.getInstance().getReference().child("User").child("1");
+        reference = FirebaseDatabase.getInstance().getReference().child("User").child("1").child("-MG3fvwu9BQi8JR_4iwq");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override

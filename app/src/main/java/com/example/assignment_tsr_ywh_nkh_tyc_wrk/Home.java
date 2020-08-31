@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,12 +19,15 @@ import java.util.List;
 
 public class Home extends AppCompatActivity{
 private Spinner spinner;
-
+private Toolbar toolbar;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         spinner = findViewById(R.id.product_list);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
 
         List<String> product=new ArrayList<>();
         product.add(0,"Product List");
@@ -32,12 +35,10 @@ private Spinner spinner;
         product.add("Clothed");
         product.add("Health Care");
         product.add("Electronic Device");
-
         ArrayAdapter<String> dataAdapter;
         dataAdapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item,product);
 
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
 
         spinner.setAdapter(dataAdapter);
 
@@ -91,7 +92,6 @@ private Spinner spinner;
         switch (item.getItemId()){
         case R.id.user_account:
             startActivity(new Intent(getApplicationContext(), UserAcc.class));
-            Toast.makeText(Home.this, "Please Work", Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onOptionsItemSelected(item);
