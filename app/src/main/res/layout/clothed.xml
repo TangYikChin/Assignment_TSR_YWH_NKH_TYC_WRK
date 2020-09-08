@@ -34,6 +34,8 @@
                     android:layout_marginRight="20dp"
                     android:elevation="4dp"
                     android:src="@drawable/share" />
+
+
             </FrameLayout>
 
             <LinearLayout
@@ -113,13 +115,13 @@
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
                         android:layout_weight="1">
-                        
+
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
                             android:id="@+id/msize"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:background="@drawable/M"/>
+                            android:background="@drawable/M" />
                     </FrameLayout>
 
                     //// L size ////
@@ -199,7 +201,57 @@
                     android:textSize="15dp"
                     />
 
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="right"
+                    android:text="Product Description"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="100% new brand and high quality.the cotton material is soft and comfortable to wear.easy to dress up and dress down."
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="14dp"
+                    />
+
+                <TextView
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:paddingLeft="9dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="ADD TO CART"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button1"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:paddingLeft="9dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="ADD TO WISHLIST"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="15dp" />
             </LinearLayout>
+
 
         </RelativeLayout>
 
