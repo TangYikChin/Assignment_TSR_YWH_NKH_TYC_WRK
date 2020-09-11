@@ -121,7 +121,7 @@
                             android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:background="@drawable/M" />
+                            android:background="@drawable/button_m" />
                     </FrameLayout>
 
                     //// L size ////
@@ -137,7 +137,7 @@
                             android:layout_height="40dp"
                             android:id="@+id/lsize"
                             android:layout_gravity="center"
-                            android:background="@drawable/L"/>
+                            android:background="@drawable/button_l"/>
                     </FrameLayout>
 
                     //// XL size ////
@@ -153,7 +153,7 @@
                             android:layout_height="40dp"
                             android:id="@+id/XLsize"
                             android:layout_gravity="center"
-                            android:background="@drawable/XL"/>
+                            android:background="@drawable/button_xl"/>
                     </FrameLayout>
 
 

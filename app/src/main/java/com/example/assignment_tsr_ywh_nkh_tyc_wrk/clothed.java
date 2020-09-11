@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class clothed extends AppCompatActivity {
 
-    ImageView M,L,XL;
+    ImageView button_m,button_l,button_xl;
     RatingBar ratingBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
