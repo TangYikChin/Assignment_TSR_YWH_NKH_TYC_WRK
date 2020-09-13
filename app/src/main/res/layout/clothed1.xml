@@ -302,19 +302,21 @@
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
                     android:textSize="14dp" />
 
+
                 <Button
                     android:id="@+id/add_to_cart_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="#D8143C"
+                    android:background="#F7FF00"
                     android:shadowColor="#FFFFFF"
                     android:text="ADD TO CHART"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#B36908"
                     android:textColorHighlight="#00FFFFFF"
                     android:textColorHint="#FFFFFF"
                     android:textColorLink="#FFFFFF" />
+
             </LinearLayout>
 
 

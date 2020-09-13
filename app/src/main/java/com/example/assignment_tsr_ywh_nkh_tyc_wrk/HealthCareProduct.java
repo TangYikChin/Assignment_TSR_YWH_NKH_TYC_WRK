@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HealthCareProduct extends AppCompatActivity {
     Button addToChartButton;
-    Button buttonM, buttonL, buttonXL;
     Button plus, minus;
     EditText sizeno;
     RatingBar ratingBar;

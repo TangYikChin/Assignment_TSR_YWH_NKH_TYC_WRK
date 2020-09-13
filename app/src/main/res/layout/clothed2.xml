@@ -308,10 +308,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="#D8143C"
+                    android:background="#F7FF00"
                     android:shadowColor="#FFFFFF"
                     android:text="ADD TO CHART"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#B36908"
                     android:textColorHighlight="#00FFFFFF"
                     android:textColorHint="#FFFFFF"
                     android:textColorLink="#FFFFFF" />
