@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ps4">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+                android:background="#FFEB3B">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <FrameLayout
+                android:id="@+id/ps4_image"
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/electricdevice3"
+                android:elevation="4dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:background="#FFFFFF"
+                    android:elevation="4dp"
+                    android:src="@drawable/ic_action_name" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ps4_image"
+                android:background="#CACFED"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <RatingBar
+                    android:id="@+id/ratingbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:isIndicator="false" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#B3BBE8"
+                    android:gravity="end"
+                    android:text="@string/price_eletronic3"
+                    android:textColor="@android:color/primary_text_light_nodisable"
+                    android:textSize="26sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating"
+                android:background="#FFEB3B"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/electronic3"
+                    android:textColor="@android:color/primary_text_light_nodisable"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="@string/colour_heading"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/colour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+                    //// white colour////
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_white"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="#FFF0F0"
+                            android:ellipsize="none"
+                            android:text="@string/white_text"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:textColorHighlight="#5E0C0C"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </FrameLayout>
+
+                    //// bleck colour////
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_black"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFF0F0"
+                            android:ellipsize="none"
+                            android:text="@string/black_text"
+                            android:textColor="@android:color/background_dark"
+                            android:textColorHighlight="#5E0C0C"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="@string/quantity_header"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/qut"
+                    android:layout_width="199dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="20dp"
+                    android:background="#B3BBE8"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/plus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="22dp"
+                        android:padding="2dp"
+                        android:text="@string/plus_icon" />
+
+                    <EditText
+                        android:id="@+id/sizeno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="@string/zero"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/minus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="22dp"
+                        android:padding="2dp"
+                        android:text="@string/minus_icon" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="@string/specificatons_header"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="4K Resolution\nHigh Dynamic Range (HDR)\nGPU: 4.20 TFLOPS, AMD Radeon\nCPU: x86-64 AMD Jaguar, 8 cores\nMemory: GDDR5 8GB\n"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="@string/service_header"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="14 days return to seller"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="@string/product_description_header"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="1 x PlayStation 4 PRO 1TB  console (MODEL: CUH 7218 BB01)\n2 x DualShock 4 Wireless Controller\n1 x Mono Headset\n1 x USB Cable\n1 xAC Power Cord\n1 x HDMI"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="14sp" />
+
+
+                <Button
+                    android:id="@+id/add_to_cart_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_orange_light"
+                    android:shadowColor="#FFFFFF"
+                    android:text="@string/add_to_chart"
+                    android:textColor="#B36908"
+                    android:textColorHighlight="#00FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

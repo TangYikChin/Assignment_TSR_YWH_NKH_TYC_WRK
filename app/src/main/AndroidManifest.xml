@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".nintendo_switch_v2"></activity>
+        <activity android:name=".ps4"></activity>
+        <activity android:name=".midea" />
+        <activity android:name=".mosquito_killer" />
+        <activity android:name=".nintendo_switch_v2" />
         <activity android:name=".xiaomi" />
         <activity android:name=".realme" />
         <activity android:name=".Home" />
