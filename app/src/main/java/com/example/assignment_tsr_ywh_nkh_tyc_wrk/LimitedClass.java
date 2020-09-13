@@ -11,7 +11,7 @@ public class LimitedClass extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.limited_product);
+        setContentView(R.layout.acticity_limited_product);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
