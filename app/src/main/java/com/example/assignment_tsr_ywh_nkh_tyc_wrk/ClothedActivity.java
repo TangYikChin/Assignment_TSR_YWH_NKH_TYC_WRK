@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ClothedActivity extends AppCompatActivity {
     Toolbar toolbar;
     ImageView clothed1;
+    ImageView clothed2;
+    ImageView clothed3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,8 @@ public class ClothedActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         clothed1 = (ImageView) findViewById(R.id.imageView6);
-
+        clothed2 = (ImageView) findViewById(R.id.imageView7);
+        clothed3 = (ImageView) findViewById(R.id.imageView12);
 
         getSupportActionBar().setTitle("Cloth Product");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -28,7 +31,21 @@ public class ClothedActivity extends AppCompatActivity {
         clothed1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), clothed.class));
+                startActivity(new Intent(getApplicationContext(), ClothedProduct.class));
+            }
+        });
+
+        clothed2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ClothedProduct.class));
+            }
+        });
+
+        clothed3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ClothedProduct.class));
             }
         });
     }

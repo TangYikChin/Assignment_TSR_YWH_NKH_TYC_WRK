@@ -4,9 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".clothed">
+    tools:context=".ClothedProduct">
+
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
@@ -16,12 +18,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+                android:background="#FFEB3B">
+
+            </androidx.appcompat.widget.Toolbar>
+
             <FrameLayout
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
                 android:layout_height="370dp"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="55dp"
                 android:background="@drawable/clothed1"
                 android:elevation="4dp"
                 android:visibility="visible">
@@ -30,12 +41,10 @@
                     android:layout_width="38dp"
                     android:layout_height="38dp"
                     android:layout_gravity="right"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:background="#FFFFFF"
                     android:elevation="4dp"
                     android:src="@drawable/ic_action_name" />
-
 
             </FrameLayout>
 
@@ -64,7 +73,7 @@
                     android:layout_weight="1"
                     android:background="#B3BBE8"
                     android:gravity="right"
-                    android:text="RM 14.85"
+                    android:text="RM 35.90"
                     android:textColor="@android:color/primary_text_light_nodisable"
                     android:textSize="26dp" />
 
@@ -84,9 +93,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/clothed2"
+                    android:gravity="right"
+                    android:text="@string/clothed1"
                     android:textColor="@android:color/primary_text_light_nodisable"
-                    android:textSize="22dp" />
+                    android:textSize="23dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -100,7 +110,7 @@
                     android:textStyle="bold" />
 
                 <LinearLayout
-                    android:id="@+id/qut"
+                    android:id="@+id/size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
@@ -140,8 +150,8 @@
 
                         <Button
                             android:id="@+id/button_l"
-                            android:layout_width="44dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="51dp"
+                            android:layout_height="match_parent"
                             android:background="#FFF0F0"
                             android:ellipsize="none"
                             android:text="L"
@@ -176,7 +186,57 @@
                     </FrameLayout>
 
 
+
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="right"
+                    android:text="Quantity"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:id="@+id/qut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/plus"
+                        android:layout_marginLeft="22dp"
+                        android:padding="2dp"
+                        android:text="+"/>
+
+                    <EditText
+                        android:id="@+id/sizeno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="16dp" />
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/minus"
+                        android:layout_marginLeft="22dp"
+                        android:padding="2dp"
+                        android:text="-"/>
+
+                </LinearLayout>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -193,8 +253,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:gravity="right"
-                    android:text="No Brand, Stripe pattern, O-Neck"
+
+                    android:text="Cocoepps brand, Embroidery/Foil Mirror Work Pattern, O-Neck"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
                     android:textSize="15dp" />
@@ -237,14 +297,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="Malaysia Supplier, VERY FAST DELIVERY Short time delivery, Good Quality and Cheap Price"
+                    android:text="100% new brand and high quality.the cotton material is soft and comfortable to wear.easy to dress up and dress down."
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
                     android:textSize="14dp" />
 
                 <Button
-                    android:id="@+id/button3"
-                    android:layout_width="100dp"
+                    android:id="@+id/add_to_cart_button"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
