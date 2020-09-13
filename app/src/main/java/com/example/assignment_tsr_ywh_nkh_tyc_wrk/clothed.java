@@ -5,22 +5,16 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RatingBar;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.HashMap;
 
 public class clothed extends AppCompatActivity {
     Button addToChartButton;
     Button buttonM,buttonL,buttonXL;
     RatingBar ratingBar;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +26,10 @@ public class clothed extends AppCompatActivity {
         buttonXL = (Button) findViewById(R.id.button_xl);
         addToChartButton = (Button) findViewById(R.id.add_to_cart_button);
         ratingBar = (RatingBar) findViewById(R.id.ratingbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         LayerDrawable stars = (LayerDrawable)ratingBar.getProgressDrawable();
 
         stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.yellow), PorterDuff.Mode.SRC_ATOP);
@@ -43,7 +41,10 @@ public class clothed extends AppCompatActivity {
                 addingToCartList();
             }
         });
+
+
     }
+
 
     private void addingToCartList()
     {

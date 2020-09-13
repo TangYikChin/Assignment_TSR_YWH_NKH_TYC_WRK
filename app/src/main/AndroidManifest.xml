@@ -17,6 +17,7 @@
         <activity android:name=".ClothedActivity" android:parentActivityName=".Home"> </activity>
         <activity android:name=".LimitedClass" android:parentActivityName=".Home"> </activity>
         <activity android:name=".UserAcc" android:parentActivityName=".Home"> </activity>
+        <activity android:name=".clothed" android:parentActivityName=".ClothedActivity"> </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
