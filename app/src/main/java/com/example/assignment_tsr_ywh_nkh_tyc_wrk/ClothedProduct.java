@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,7 +19,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class ClothedProduct extends AppCompatActivity {
+public class ClothedProduct extends AppCompatActivity implements View.OnClickListener {
+    Toolbar toolbar;
     Button addToChartButton;
     Button buttonM,buttonL,buttonXL;
     Button plus, minus;
@@ -32,9 +34,17 @@ public class ClothedProduct extends AppCompatActivity {
         setContentView(R.layout.clothed2);
         setContentView(R.layout.clothed3);
 
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Cloth Product Details");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         buttonM = (Button) findViewById(R.id.button_m);
         buttonL = (Button) findViewById(R.id.button_l);
         buttonXL = (Button) findViewById(R.id.button_xl);
+        buttonM.setOnClickListener(this);
+        buttonL.setOnClickListener(this);
+        buttonXL.setOnClickListener(this);
         plus = (Button) findViewById(R.id.plus);
         minus = (Button) findViewById(R.id.minus);
         sizeno = (EditText) findViewById(R.id.sizeno);
@@ -77,50 +87,23 @@ public class ClothedProduct extends AppCompatActivity {
 
         });
 
-        buttonM.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                clickOfSize("1");
-            }
-        });
 
-        buttonL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                clickOfSize("2");
-            }
-        });
 
-        buttonXL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                clickOfSize("3");
-            }
-        });
-    }
-
-    private void clickOfSize(String s)
-    {
-        buttonM.setVisibility(View.GONE);
-        buttonL.setVisibility(View.GONE);
-        buttonXL.setVisibility(View.GONE);
-
-        if(s.equalsIgnoreCase("1")){
-            buttonM.setVisibility(View.VISIBLE);
-        }
-
-        if(s.equalsIgnoreCase("2")){
-            buttonL.setVisibility(View.VISIBLE);
-        }
-
-        if(s.equalsIgnoreCase("3")){
-            buttonXL.setVisibility(View.VISIBLE);
-        }
     }
 
 
-
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button_m:
+                Toast.makeText(this,"M size was selected",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button_l:
+                Toast.makeText(this,"L size was selected",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button_xl:
+                Toast.makeText(this,"XL size was selected",Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
 }

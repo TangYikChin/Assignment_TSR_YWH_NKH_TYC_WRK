@@ -12,18 +12,18 @@ import androidx.appcompat.widget.Toolbar;
 public class HealthCareActivity extends AppCompatActivity {
     Toolbar toolbar;
     ImageView mask;
-    ImageView handsanitizer;
+    ImageView sanitizer;
     ImageView vitamin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_care);
+        mask = (ImageView) findViewById(R.id.imageView);
+        sanitizer = (ImageView) findViewById(R.id.imageView5);
+        vitamin = (ImageView) findViewById(R.id.imageView11);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mask = (ImageView) findViewById(R.id.imageView);
-        handsanitizer = (ImageView) findViewById(R.id.imageView5);
-        vitamin = (ImageView) findViewById(R.id.imageView11);
 
         getSupportActionBar().setTitle("Limited Class");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -35,7 +35,7 @@ public class HealthCareActivity extends AppCompatActivity {
             }
         });
 
-        handsanitizer.setOnClickListener(new View.OnClickListener() {
+        sanitizer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), HealthCareProduct.class));
