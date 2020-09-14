@@ -35,6 +35,9 @@ public class Mask extends AppCompatActivity {
         sizeno.setText("" + number[0]);
         addToChartButton = (Button) findViewById(R.id.add_to_cart_button);
         ratingBar = (RatingBar) findViewById(R.id.ratingbar);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
 
         stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.yellow), PorterDuff.Mode.SRC_ATOP);
