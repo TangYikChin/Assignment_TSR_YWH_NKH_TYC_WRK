@@ -50,4 +50,27 @@
     <string name="user_account">User Account</string>
     <string name="Open">NavBar</string>
     <string name="Close">NavBar</string>
+    <string name="realmeTitle">RealMe 6 Pro</string>
+    <string name="realme_price">RM 179.00</string>
+    <string name="colour_heading">Please select a colour:</string>
+    <string name="red_text">RED</string>
+    <string name="blue_text">BLUE</string>
+    <string name="add_to_chart">ADD TO CHART</string>
+    <string name="black_text">BLACK</string>
+    <string name="quantity_header">Quantity</string>
+    <string name="plus_icon">+</string>
+    <string name="zero">0</string>
+    <string name="minus_icon">-</string>
+    <string name="specificatons_header">Specifications</string>
+    <string name="service_header">Service</string>
+    <string name="product_description_header">Product Description</string>
+    <string name="xiaomi_price">RM 579.00</string>
+    <string name="xiaomi_title">Redmi Note 8</string>
+    <string name="purple_text">PURPLE</string>
+    <string name="nintendo_price">RM 1629.00</string>
+    <string name="nintendo_title">Nintendo Switch V2</string>
+    <string name="neon_text">NEON</string>
+    <string name="grey_text">GREY</string>
+    <string name="mosquito_killer_title">Baseus Mosquito Killer Lamp</string>
+    <string name="white_text">WHITE</string>
 </resources>
