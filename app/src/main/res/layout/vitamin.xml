@@ -43,7 +43,7 @@
                     android:layout_marginRight="20dp"
                     android:background="#FFFFFF"
                     android:elevation="4dp"
-                    android:src="@drawable/share" />
+                    android:src="@drawable/ic_action_name" />
 
 
             </FrameLayout>

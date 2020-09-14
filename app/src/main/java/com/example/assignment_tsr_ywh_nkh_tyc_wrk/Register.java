@@ -39,7 +39,7 @@ public class Register extends AppCompatActivity {
         etPhone = (EditText) findViewById(R.id.etPhone);
         user = new User();
         fAuth = FirebaseAuth.getInstance();
-        reference = FirebaseDatabase.getInstance().getReference().child("User").child("1");
+        reference = FirebaseDatabase.getInstance().getReference().child("User");
 
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +58,7 @@ public class Register extends AppCompatActivity {
                 user.setPhone(etPhone.getText().toString().trim());
 
 
-                reference.push().setValue(user);
+                reference.child(phone).setValue(user);
                 Toast.makeText(Register.this, "Data Insert Successfully", Toast.LENGTH_SHORT).show();
 
                 if (TextUtils.isEmpty(username)){

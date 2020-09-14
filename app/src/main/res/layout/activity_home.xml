@@ -85,7 +85,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="38dp"
                 android:layout_marginTop="100dp"
-                app:srcCompat="@drawable/handSanitizer" />
+                app:srcCompat="@drawable/sanitizer" />
 
             <TextView
                 android:id="@+id/textView3"
