@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nintendo_switch_v2">
+    tools:context=".LimitedProduct">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -27,7 +27,7 @@
             </androidx.appcompat.widget.Toolbar>
 
             <FrameLayout
-                android:id="@+id/nintendo_image"
+                android:id="@+id/imageView16"
                 android:layout_width="match_parent"
                 android:layout_height="370dp"
                 android:layout_alignParentTop="true"
@@ -51,7 +51,7 @@
                 android:id="@+id/rating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/nintendo_image"
+                android:layout_below="@+id/imageView16"
                 android:background="#CACFED"
                 android:gravity="center"
                 android:orientation="horizontal"
