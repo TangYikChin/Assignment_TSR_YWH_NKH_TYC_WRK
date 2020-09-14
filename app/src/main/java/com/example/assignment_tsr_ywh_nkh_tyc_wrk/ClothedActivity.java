@@ -31,21 +31,21 @@ public class ClothedActivity extends AppCompatActivity {
         clothed1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ClothedProduct.class));
+                startActivity(new Intent(getApplicationContext(), Clothed1Product.class));
             }
         });
 
         clothed2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ClothedProduct.class));
+                startActivity(new Intent(getApplicationContext(), Clothed1Product.class));
             }
         });
 
         clothed3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ClothedProduct.class));
+                startActivity(new Intent(getApplicationContext(), Clothed1Product.class));
             }
         });
     }
