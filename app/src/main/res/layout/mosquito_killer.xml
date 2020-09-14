@@ -285,7 +285,7 @@
                     android:layout_weight="1"
                     android:background="@android:color/holo_orange_light"
                     android:shadowColor="#FFFFFF"
-                    android:text="@string/add_to_chart"
+                    android:text="ADD TO CART"
                     android:textColor="#B36908"
                     android:textColorHighlight="#00FFFFFF"
                     android:textColorHint="#FFFFFF"
