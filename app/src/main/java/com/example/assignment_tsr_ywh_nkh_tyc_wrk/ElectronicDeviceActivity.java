@@ -38,13 +38,13 @@ public class ElectronicDeviceActivity extends AppCompatActivity {
         electronic2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MosquitoKiller.class));
+                startActivity(new Intent(getApplicationContext(), MediaProduct.class));
             }
         });
         electronic3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MosquitoKiller.class));
+                startActivity(new Intent(getApplicationContext(),PlayStation.class));
             }
         });
 
