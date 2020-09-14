@@ -26,7 +26,7 @@
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/limited_product"
-        app:srcCompat="@drawable/handsanitizer" />
+        app:srcCompat="@drawable/sanitizer" />
 
     <TextView
         android:id="@+id/mask1"

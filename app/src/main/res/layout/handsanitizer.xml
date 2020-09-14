@@ -31,7 +31,7 @@
                 android:layout_height="370dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="55dp"
-                android:background="@drawable/handsanitizer"
+                android:background="@drawable/sanitizer"
                 android:elevation="4dp"
                 android:visibility="visible">
 
