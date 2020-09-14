@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class ElectronicDeviceProduct extends AppCompatActivity implements View.OnClickListener{
+public class MosquitoKiller extends AppCompatActivity implements View.OnClickListener{
 
         Toolbar toolbar;
         Button addToChartButton;
@@ -25,8 +25,6 @@ public class ElectronicDeviceProduct extends AppCompatActivity implements View.O
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.mosquito_killer);
-            setContentView(R.layout.midea);
-            setContentView(R.layout.ps4);
 
             toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);

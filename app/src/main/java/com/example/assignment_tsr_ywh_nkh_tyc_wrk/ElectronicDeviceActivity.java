@@ -32,19 +32,19 @@ public class ElectronicDeviceActivity extends AppCompatActivity {
         electronic1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ElectronicDeviceProduct.class));
+                startActivity(new Intent(getApplicationContext(), MosquitoKiller.class));
             }
         });
         electronic2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ElectronicDeviceProduct.class));
+                startActivity(new Intent(getApplicationContext(), MosquitoKiller.class));
             }
         });
         electronic3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ElectronicDeviceProduct.class));
+                startActivity(new Intent(getApplicationContext(), MosquitoKiller.class));
             }
         });
 
