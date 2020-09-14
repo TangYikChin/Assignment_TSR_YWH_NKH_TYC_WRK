@@ -28,6 +28,42 @@
         <activity
             android:name=".UserAcc"
             android:parentActivityName=".Home" />
+        <activity
+            android:name=".Clothed1Product"
+            android:parentActivityName=".ClothedActivity"/>
+        <activity
+            android:name=".Clothed2Product"
+            android:parentActivityName=".ClothedActivity"/>
+        <activity
+            android:name=".Clothed3Product"
+            android:parentActivityName=".ClothedActivity"/>
+        <activity
+            android:name=".Mask"
+            android:parentActivityName=".HealthCareActivity"/>
+        <activity
+            android:name=".Sanitizer"
+            android:parentActivityName=".HealthCareActivity"/>
+        <activity
+            android:name=".Vitamin"
+            android:parentActivityName=".HealthCareActivity"/>
+        <activity
+            android:name=".MosquitoKiller"
+            android:parentActivityName=".ElectronicDeviceActivity"/>
+        <activity
+            android:name=".MediaProduct"
+            android:parentActivityName=".ElectronicDeviceActivity"/>
+        <activity
+            android:name=".PlayStation"
+            android:parentActivityName=".ElectronicDeviceActivity"/>
+        <activity
+            android:name=".Xiaomi"
+            android:parentActivityName=".LimitedActivity"/>
+        <activity
+            android:name=".Realme"
+            android:parentActivityName=".LimitedActivity"/>
+        <activity
+            android:name=".Nintendo"
+            android:parentActivityName=".LimitedActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

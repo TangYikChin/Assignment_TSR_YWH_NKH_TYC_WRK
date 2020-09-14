@@ -9,8 +9,10 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class Vitamin extends AppCompatActivity {
+    Toolbar toolbar;
     Button addToChartButton;
     Button plus, minus;
     EditText sizeno;
@@ -20,6 +22,12 @@ public class Vitamin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vitamin);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Health Care Product Details");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         plus = (Button) findViewById(R.id.plus);
         minus = (Button) findViewById(R.id.minus);

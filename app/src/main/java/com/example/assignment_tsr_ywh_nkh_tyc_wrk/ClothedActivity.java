@@ -38,14 +38,14 @@ public class ClothedActivity extends AppCompatActivity {
         clothed2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Clothed1Product.class));
+                startActivity(new Intent(getApplicationContext(), Clothed2Product.class));
             }
         });
 
         clothed3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Clothed1Product.class));
+                startActivity(new Intent(getApplicationContext(), Clothed3Product.class));
             }
         });
     }
