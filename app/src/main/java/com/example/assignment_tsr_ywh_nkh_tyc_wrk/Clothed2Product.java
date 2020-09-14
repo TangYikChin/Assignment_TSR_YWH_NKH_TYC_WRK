@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class ClothedProduct extends AppCompatActivity implements View.OnClickListener {
+public class Clothed2Product extends AppCompatActivity implements View.OnClickListener {
     Toolbar toolbar;
     Button addToChartButton;
     Button buttonM,buttonL,buttonXL;
@@ -30,9 +30,7 @@ public class ClothedProduct extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.clothed1);
         setContentView(R.layout.clothed2);
-        setContentView(R.layout.clothed3);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -74,10 +72,10 @@ public class ClothedProduct extends AppCompatActivity implements View.OnClickLis
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(number[0]==9){
+                if(number[0]==100){
                     sizeno.setText(""+number[0]);
                 }
-                if(number[0]<9){
+                if(number[0]<100){
                     number[0] = number[0] +1;
                     sizeno.setText(""+number[0]);
                 }
