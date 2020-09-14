@@ -7,20 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+public class PlayStation extends AppCompatActivity implements View.OnClickListener{
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.HashMap;
-
-public class ClothedProduct extends AppCompatActivity {
+    Toolbar toolbar;
     Button addToChartButton;
-    Button buttonM,buttonL,buttonXL;
+    Button buttonBlack,buttonWhite,buttonGrey;
     Button plus, minus;
     EditText sizeno;
     RatingBar ratingBar;
@@ -28,13 +24,21 @@ public class ClothedProduct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.clothed1);
-        setContentView(R.layout.clothed2);
-        setContentView(R.layout.clothed3);
+        setContentView(R.layout.ps4);
 
-        buttonM = (Button) findViewById(R.id.button_m);
-        buttonL = (Button) findViewById(R.id.button_l);
-        buttonXL = (Button) findViewById(R.id.button_xl);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Electronic Device Product Details");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        buttonBlack = (Button) findViewById(R.id.button_black);
+        buttonWhite = (Button) findViewById(R.id.button_white);
+        buttonGrey = (Button) findViewById(R.id.button_grey);
+
+        buttonBlack.setOnClickListener(this);
+        buttonWhite.setOnClickListener(this);
+        buttonGrey.setOnClickListener(this);
+
         plus = (Button) findViewById(R.id.plus);
         minus = (Button) findViewById(R.id.minus);
         sizeno = (EditText) findViewById(R.id.sizeno);
@@ -77,50 +81,24 @@ public class ClothedProduct extends AppCompatActivity {
 
         });
 
-        buttonM.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                clickOfSize("1");
-            }
-        });
 
-        buttonL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                clickOfSize("2");
-            }
-        });
 
-        buttonXL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                clickOfSize("3");
-            }
-        });
-    }
-
-    private void clickOfSize(String s)
-    {
-        buttonM.setVisibility(View.GONE);
-        buttonL.setVisibility(View.GONE);
-        buttonXL.setVisibility(View.GONE);
-
-        if(s.equalsIgnoreCase("1")){
-            buttonM.setVisibility(View.VISIBLE);
-        }
-
-        if(s.equalsIgnoreCase("2")){
-            buttonL.setVisibility(View.VISIBLE);
-        }
-
-        if(s.equalsIgnoreCase("3")){
-            buttonXL.setVisibility(View.VISIBLE);
-        }
     }
 
 
-
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button_white:
+                Toast.makeText(this,"White color was selected",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button_black:
+                Toast.makeText(this,"Black color was selected",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button_grey:
+                Toast.makeText(this,"Grey color was selected",Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
 }
+

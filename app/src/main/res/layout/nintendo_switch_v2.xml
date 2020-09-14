@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Mask">
+    tools:context=".Nintendo">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
@@ -15,6 +16,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -24,27 +26,24 @@
 
             </androidx.appcompat.widget.Toolbar>
 
-
             <FrameLayout
-                android:id="@+id/imageView6"
+                android:id="@+id/imageView16"
                 android:layout_width="match_parent"
                 android:layout_height="370dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="55dp"
-                android:background="@drawable/mask"
+                android:background="@drawable/nintendo"
                 android:elevation="4dp"
                 android:visibility="visible">
 
                 <ImageView
                     android:layout_width="38dp"
                     android:layout_height="38dp"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
                     android:background="#FFFFFF"
                     android:elevation="4dp"
                     android:src="@drawable/ic_action_name" />
-
 
             </FrameLayout>
 
@@ -52,7 +51,7 @@
                 android:id="@+id/rating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imageView6"
+                android:layout_below="@+id/imageView16"
                 android:background="#CACFED"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -68,48 +67,112 @@
 
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#B3BBE8"
-                    android:gravity="right"
-                    android:text="RM 11.00"
+                    android:gravity="end"
+                    android:text="@string/nintendo_price"
                     android:textColor="@android:color/primary_text_light_nodisable"
-                    android:textSize="26dp" />
+                    android:textSize="26sp" />
 
 
             </LinearLayout>
 
             <LinearLayout
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rating"
-            android:background="#FFEB3B"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/mask2"
-                android:textColor="@android:color/primary_text_light_nodisable"
-                android:textSize="23dp" />
+                android:layout_below="@+id/rating"
+                android:background="#FFEB3B"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:gravity="right"
-                android:text="Quantity"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/nintendo_title"
+                    android:textColor="@android:color/primary_text_light_nodisable"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="@string/colour_heading"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/colour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+                    //// neon colour////
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_neon"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="#FFF0F0"
+                            android:ellipsize="none"
+                            android:text="@string/neon_text"
+                            android:textColor="?attr/colorControlActivated"
+                            android:textColorHighlight="#5E0C0C"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </FrameLayout>
+
+                    //// grey colour////
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_grey"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFF0F0"
+                            android:ellipsize="none"
+                            android:text="@string/grey_text"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:textColorHighlight="#5E0C0C"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+                    </FrameLayout>
 
 
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="@string/quantity_header"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:id="@+id/qut"
@@ -150,69 +213,71 @@
 
                 </LinearLayout>
 
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:gravity="right"
-                    android:text="Specificatons"
+                    android:gravity="end"
+                    android:text="@string/specificatons_header"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-
-                    android:text="Bareno, THEFASTMASK, BFE>=95%"
+                    android:text="【2019 ALL-NEW Nintendo Switch Neon / Grey Battery Enhanced Edition】\nNintendo has just announced a new Nintendo Switch model with longer battery life, which will become available starting mid August.According to Nintendo, its new HAC-001(-01) Switch model will become available next month and the increase in battery life is quite substantial. While the battery of the current HAC-001 Switch model lasts for approximately 2.5 to 6.5 hours in portable mode, the new model’s battery can last up to 9 hours on a single charge. "
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/service"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:gravity="right"
-                    android:text="Service"
+                    android:gravity="end"
+                    android:text="@string/service_header"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:gravity="right"
-                    android:text="14 days return to seller and No WARRANTY"
+                    android:gravity="end"
+                    android:text="14 days return to seller"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:gravity="right"
-                    android:text="Product Description"
+                    android:gravity="end"
+                    android:text="@string/product_description_header"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="Our Bareno 3 ply face mask provide protection against the spread of infectious and large particle droplets that are trasmitted by close contact."
+                    android:text="1 x Nintendo Switch console OR New Battery Enhanced Edition Console\n1 x Nintendo Switch dock\n1 x Joy-Con (L) and Joy-Con (R)\n1 x Two Joy-Con strap accessories\n1 x One Joy-Con grip\n1 x HDMI cable\n1 x Nintendo Switch AC adapter"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="14dp" />
+                    android:textSize="14sp" />
+
+
                 <Button
                     android:id="@+id/add_to_cart_button"
                     android:layout_width="match_parent"
@@ -227,10 +292,12 @@
                     android:textColorHint="#FFFFFF"
                     android:textColorLink="#FFFFFF"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
 
         </RelativeLayout>
 
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

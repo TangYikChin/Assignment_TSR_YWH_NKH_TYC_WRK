@@ -52,7 +52,7 @@ private Toolbar toolbar;
                 }
                 else {
                     if (parent.getItemAtPosition(position).equals("Limited Product")) {
-                        startActivity(new Intent(getApplicationContext(), LimitedClass.class));
+                        startActivity(new Intent(getApplicationContext(), LimitedActivity.class));
                     }
                     if (parent.getItemAtPosition(position).equals("Clothed")){
                         startActivity(new Intent(getApplicationContext(), ClothedActivity.class));

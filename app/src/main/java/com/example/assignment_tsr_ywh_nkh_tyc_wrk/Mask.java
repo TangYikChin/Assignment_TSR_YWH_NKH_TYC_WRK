@@ -10,7 +10,7 @@ import android.widget.RatingBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HealthCareProduct extends AppCompatActivity {
+public class Mask extends AppCompatActivity {
     Button addToChartButton;
     Button plus, minus;
     EditText sizeno;
@@ -20,8 +20,6 @@ public class HealthCareProduct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mask);
-        setContentView(R.layout.handsanitizer);
-        setContentView(R.layout.vitamin);
 
         plus = (Button) findViewById(R.id.plus);
         minus = (Button) findViewById(R.id.minus);

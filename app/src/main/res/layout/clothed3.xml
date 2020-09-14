@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ClothedProduct">
+    tools:context=".Clothed3Product">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rating"
                 android:layout_marginTop="1dp"
-                android:background="#CFD4EC"
+                android:background="#FFEB3B"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -192,6 +192,56 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
+                    android:gravity="end"
+                    android:text="@string/quantity_header"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHighlight="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/qut1"
+                    android:layout_width="199dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="20dp"
+                    android:background="#B3BBE8"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/plus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="22dp"
+                        android:padding="2dp"
+                        android:text="@string/plus_icon" />
+
+                    <EditText
+                        android:id="@+id/sizeno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="@string/zero"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/minus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="22dp"
+                        android:padding="2dp"
+                        android:text="@string/minus_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:gravity="right"
                     android:text="Specificatons"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
@@ -253,18 +303,19 @@
                     android:textSize="14dp" />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/add_to_cart_button"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="#D8143C"
+                    android:background="@android:color/holo_orange_light"
                     android:shadowColor="#FFFFFF"
-                    android:text="ADD TO CHART"
-                    android:textColor="#FFFFFF"
+                    android:text="@string/add_to_chart"
+                    android:textColor="#B36908"
                     android:textColorHighlight="#00FFFFFF"
                     android:textColorHint="#FFFFFF"
-                    android:textColorLink="#FFFFFF" />
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp" />
             </LinearLayout>
 
 

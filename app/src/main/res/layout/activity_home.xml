@@ -44,7 +44,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="33dp"
                 android:layout_marginTop="0dp"
-                android:text="@string/mask1" />
+                android:text="Dettol Hand Sanitizer Original 200ml" />
 
             <TextView
                 android:id="@+id/textView"
@@ -54,7 +54,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="33dp"
                 android:layout_marginTop="0dp"
-                android:text="@string/price_Mask1" />
+                android:text="RM 17.90" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -85,7 +85,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="38dp"
                 android:layout_marginTop="100dp"
-                app:srcCompat="@drawable/mask1" />
+                app:srcCompat="@drawable/sanitizer" />
 
             <TextView
                 android:id="@+id/textView3"
