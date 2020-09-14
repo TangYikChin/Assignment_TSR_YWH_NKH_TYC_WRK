@@ -18,6 +18,7 @@ public class Vitamin extends AppCompatActivity {
     EditText sizeno;
     RatingBar ratingBar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
