@@ -19,33 +19,33 @@ public class HealthCareActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_care);
-        mask = (ImageView) findViewById(R.id.imageView);
-        sanitizer = (ImageView) findViewById(R.id.imageView5);
+        mask = (ImageView) findViewById(R.id.imageView5);
+        sanitizer = (ImageView) findViewById(R.id.imageView);
         vitamin = (ImageView) findViewById(R.id.imageView11);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("Limited Class");
+        getSupportActionBar().setTitle("Health Care Product");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), HealthCareProduct.class));
+                startActivity(new Intent(getApplicationContext(), Mask.class));
             }
         });
 
         sanitizer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), HealthCareProduct.class));
+                startActivity(new Intent(getApplicationContext(), Sanitizer.class));
             }
         });
 
         vitamin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), HealthCareProduct.class));
+                startActivity(new Intent(getApplicationContext(),Vitamin.class));
             }
         });
     }

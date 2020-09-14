@@ -30,19 +30,19 @@ public class LimitedActivity extends AppCompatActivity {
         realmi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), LimitedProduct.class));
+                startActivity(new Intent(getApplicationContext(), Realme.class));
             }
         });
         redmi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), LimitedProduct.class));
+                startActivity(new Intent(getApplicationContext(), Xiaomi.class));
             }
         });
         nintendo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), LimitedProduct.class));
+                startActivity(new Intent(getApplicationContext(), Nintendo.class));
             }
         });
 
