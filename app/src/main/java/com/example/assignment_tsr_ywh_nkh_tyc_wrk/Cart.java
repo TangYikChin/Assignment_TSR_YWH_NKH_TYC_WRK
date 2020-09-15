@@ -1,13 +1,16 @@
 package com.example.assignment_tsr_ywh_nkh_tyc_wrk;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -48,7 +53,7 @@ public class Cart extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Cart List");
 
         FirebaseRecyclerOptions<CartGetSet> options = new FirebaseRecyclerOptions.Builder<CartGetSet>()
                 .setQuery(reference.child("User View"), CartGetSet.class).build();
@@ -59,6 +64,32 @@ public class Cart extends AppCompatActivity {
                 holder.txtProductName.setText("Product Name: " + model.getpName());
                 holder.txtProductPrice.setText("Price: " +model.getPrice());
                 holder.txtProductQuantity.setText("Quantity: " + model.getQuantity());
+
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        CharSequence options[] = new CharSequence[]{
+                                "Remove"
+                        };
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Cart.this);
+                        builder.setTitle("Cart Options: ");
+
+                        builder.setItems(options, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                if (i == 0){
+                                    reference.child("User View").child("Product").removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            Toast.makeText(Cart.this, "Item Remove!", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                        builder.show();
+                    }
+                });
 
             }
 

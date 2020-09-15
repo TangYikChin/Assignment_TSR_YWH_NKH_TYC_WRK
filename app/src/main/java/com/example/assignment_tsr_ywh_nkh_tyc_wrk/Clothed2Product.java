@@ -113,7 +113,7 @@ public class Clothed2Product extends AppCompatActivity implements View.OnClickLi
                 cartMap.put("date", saveCurrentDate);
                 cartMap.put("time", saveCurrentTime);
 
-                reference.child("User View").child("Product").updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                reference.child("User View").child("Product").child(productName.getText().toString()).updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
