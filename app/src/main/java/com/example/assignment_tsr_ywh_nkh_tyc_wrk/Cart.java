@@ -56,7 +56,7 @@ public class Cart extends AppCompatActivity {
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Cart List");
 
         FirebaseRecyclerOptions<CartGetSet> options = new FirebaseRecyclerOptions.Builder<CartGetSet>()
-                .setQuery(reference.child("User View"), CartGetSet.class).build();
+                .setQuery(reference.child("User View").child("Product"), CartGetSet.class).build();
 
         FirebaseRecyclerAdapter<CartGetSet, CartViewHolder> adapter = new FirebaseRecyclerAdapter<CartGetSet, CartViewHolder>(options) {
             @Override
