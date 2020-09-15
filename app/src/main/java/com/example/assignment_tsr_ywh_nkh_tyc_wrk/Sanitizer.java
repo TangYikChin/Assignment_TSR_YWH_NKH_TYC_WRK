@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Sanitizer extends AppCompatActivity {
+    Toolbar toolbar;
     Button addToChartButton;
     Button plus, minus;
     EditText sizeno;
@@ -29,6 +31,9 @@ public class Sanitizer extends AppCompatActivity {
         sizeno.setText("" + number[0]);
         addToChartButton = (Button) findViewById(R.id.add_to_cart_button);
         ratingBar = (RatingBar) findViewById(R.id.ratingbar);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
 
         stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.yellow), PorterDuff.Mode.SRC_ATOP);

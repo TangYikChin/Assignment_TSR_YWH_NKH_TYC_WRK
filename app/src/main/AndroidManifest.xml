@@ -64,6 +64,8 @@
         <activity
             android:name=".Nintendo"
             android:parentActivityName=".LimitedActivity"/>
+        <activity android:name=".Cart"
+            android:parentActivityName=".Home" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
