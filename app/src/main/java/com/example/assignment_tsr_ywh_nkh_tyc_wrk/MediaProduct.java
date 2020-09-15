@@ -16,7 +16,7 @@ public class MediaProduct extends AppCompatActivity implements View.OnClickListe
 
     Toolbar toolbar;
     Button addToChartButton;
-    Button buttonBlack,buttonWhite,buttonGrey;
+    Button buttonBlack,buttonGrey;
     Button plus, minus;
     EditText sizeno;
     RatingBar ratingBar;
@@ -32,11 +32,9 @@ public class MediaProduct extends AppCompatActivity implements View.OnClickListe
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         buttonBlack = (Button) findViewById(R.id.button_black);
-        buttonWhite = (Button) findViewById(R.id.button_white);
         buttonGrey = (Button) findViewById(R.id.button_grey);
 
         buttonBlack.setOnClickListener(this);
-        buttonWhite.setOnClickListener(this);
         buttonGrey.setOnClickListener(this);
 
         plus = (Button) findViewById(R.id.plus);
@@ -89,9 +87,6 @@ public class MediaProduct extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.button_white:
-                Toast.makeText(this,"White color was selected",Toast.LENGTH_SHORT).show();
-                break;
             case R.id.button_black:
                 Toast.makeText(this,"Black color was selected",Toast.LENGTH_SHORT).show();
                 break;

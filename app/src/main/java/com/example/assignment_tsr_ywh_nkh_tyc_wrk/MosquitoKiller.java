@@ -16,7 +16,7 @@ public class MosquitoKiller extends AppCompatActivity implements View.OnClickLis
 
         Toolbar toolbar;
         Button addToChartButton;
-        Button buttonBlack,buttonWhite,buttonGrey;
+        Button buttonBlack,buttonWhite;
         Button plus, minus;
         EditText sizeno;
         RatingBar ratingBar;
@@ -33,11 +33,9 @@ public class MosquitoKiller extends AppCompatActivity implements View.OnClickLis
 
             buttonBlack = (Button) findViewById(R.id.button_black);
             buttonWhite = (Button) findViewById(R.id.button_white);
-            buttonGrey = (Button) findViewById(R.id.button_grey);
 
             buttonBlack.setOnClickListener(this);
             buttonWhite.setOnClickListener(this);
-            buttonGrey.setOnClickListener(this);
 
             plus = (Button) findViewById(R.id.plus);
             minus = (Button) findViewById(R.id.minus);
@@ -94,9 +92,6 @@ public class MosquitoKiller extends AppCompatActivity implements View.OnClickLis
                     break;
                 case R.id.button_black:
                     Toast.makeText(this,"Black color was selected",Toast.LENGTH_SHORT).show();
-                    break;
-                case R.id.button_grey:
-                    Toast.makeText(this,"Grey color was selected",Toast.LENGTH_SHORT).show();
                     break;
             }
         }

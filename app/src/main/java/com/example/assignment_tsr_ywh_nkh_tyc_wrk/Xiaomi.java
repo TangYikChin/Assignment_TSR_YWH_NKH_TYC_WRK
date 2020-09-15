@@ -15,7 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 public class Xiaomi extends AppCompatActivity implements View.OnClickListener {
     Toolbar toolbar;
     Button addToChartButton;
-    Button buttonRed,buttonBlue,buttonBlack,buttonPurple,buttonGrey,buttonNeon;
+    Button buttonBlue,buttonBlack,buttonPurple;
     Button plus, minus;
     EditText sizeno;
     RatingBar ratingBar;
@@ -31,16 +31,10 @@ public class Xiaomi extends AppCompatActivity implements View.OnClickListener {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         buttonBlack = (Button) findViewById(R.id.button_black);
-        buttonRed = (Button) findViewById(R.id.button_red);
-        buttonGrey = (Button) findViewById(R.id.button_grey);
-        buttonNeon = (Button) findViewById(R.id.button_neon);
         buttonBlue = (Button) findViewById(R.id.button_blue);
         buttonPurple = (Button) findViewById(R.id.button_purple);
 
         buttonBlack.setOnClickListener(this);
-        buttonRed.setOnClickListener(this);
-        buttonGrey.setOnClickListener(this);
-        buttonNeon.setOnClickListener(this);
         buttonBlue.setOnClickListener(this);
         buttonPurple.setOnClickListener(this);
 
@@ -94,24 +88,14 @@ public class Xiaomi extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.button_white:
+            case R.id.button_purple:
                 Toast.makeText(this,"White color was selected",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button_black:
                 Toast.makeText(this,"Black color was selected",Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.button_grey:
-                Toast.makeText(this,"Grey color was selected",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button_neon:
-                Toast.makeText(this,"Neon color was selected",Toast.LENGTH_SHORT).show();
-                break;
             case R.id.button_blue:
                 Toast.makeText(this,"Blue color was selected",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button_red:
-                Toast.makeText(this,"Red color was selected",Toast.LENGTH_SHORT).show();
-                break;
 
         }
     }
