@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,14 +21,48 @@ import java.util.List;
 public class Home extends AppCompatActivity{
 private Spinner spinner;
 private Toolbar toolbar;
+ImageView image1, image2, image3, image4;
+
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         spinner = findViewById(R.id.product_list);
         toolbar = findViewById(R.id.toolbar);
+        image1 = (ImageView) findViewById(R.id.imageView3);
+        image2 = (ImageView) findViewById(R.id.imageView4);
+        image3 = (ImageView) findViewById(R.id.imageView);
+        image4 = (ImageView) findViewById(R.id.imageView2);
 
         setSupportActionBar(toolbar);
+
+        image1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Clothed1Product.class));
+            }
+        });
+
+        image2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Clothed2Product.class));
+            }
+        });
+
+        image3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Sanitizer.class));
+            }
+        });
+
+        image4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Mask.class));
+            }
+        });
 
         List<String> product=new ArrayList<>();
         product.add(0,"Product List");
