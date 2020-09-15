@@ -49,5 +49,4 @@ public class ClothedActivity extends AppCompatActivity {
             }
         });
     }
-    // Handle action bar item clicks here. The action bar will
 }

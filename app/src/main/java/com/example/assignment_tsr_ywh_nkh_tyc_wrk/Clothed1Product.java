@@ -31,7 +31,7 @@ public class Clothed1Product extends AppCompatActivity implements View.OnClickLi
     Button plus, minus;
     EditText sizeno;
     RatingBar ratingBar;
-    String productID = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,6 @@ public class Clothed1Product extends AppCompatActivity implements View.OnClickLi
         getSupportActionBar().setTitle("Cloth Product Details");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        productID = getIntent().getStringExtra("pid");
         productName = (TextView) findViewById(R.id.cloth1Name);
         productPrice = (TextView) findViewById(R.id.cloth1Price);
         buttonM = (Button) findViewById(R.id.button_m);
@@ -109,9 +108,8 @@ public class Clothed1Product extends AppCompatActivity implements View.OnClickLi
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Cart List");
 
                 final HashMap<String , Object> cartMap = new HashMap<>();
-                cartMap.put("pid", productID);
                 cartMap.put("pName", productName.getText().toString());
-                cartMap.put("p{rice", productPrice.getText().toString());
+                cartMap.put("price", productPrice.getText().toString());
                 cartMap.put("date", saveCurrentDate);
                 cartMap.put("time", saveCurrentTime);
 
