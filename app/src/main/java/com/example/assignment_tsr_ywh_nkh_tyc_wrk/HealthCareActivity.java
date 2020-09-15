@@ -25,7 +25,7 @@ public class HealthCareActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("Limited Class");
+        getSupportActionBar().setTitle("Health Care Product");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mask.setOnClickListener(new View.OnClickListener() {

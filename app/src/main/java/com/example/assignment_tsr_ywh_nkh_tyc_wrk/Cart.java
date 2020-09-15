@@ -1,6 +1,7 @@
 package com.example.assignment_tsr_ywh_nkh_tyc_wrk;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,8 @@ public class Cart extends AppCompatActivity {
     TextView totalPrice;
     Toolbar toolbar;
 
+    float TotalPrice = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,19 @@ public class Cart extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                totalPrice.setText(String.valueOf("Total Price: " + TotalPrice));
+
+                Intent intent = new Intent(Cart.this, ConfirmFinalOrder.class);
+                intent.putExtra("Total Price", String.valueOf(TotalPrice));
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     @Override
@@ -56,7 +72,7 @@ public class Cart extends AppCompatActivity {
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Cart List");
 
         FirebaseRecyclerOptions<CartGetSet> options = new FirebaseRecyclerOptions.Builder<CartGetSet>()
-                .setQuery(reference.child("User View"), CartGetSet.class).build();
+                .setQuery(reference.child("User View").child("Product"), CartGetSet.class).build();
 
         FirebaseRecyclerAdapter<CartGetSet, CartViewHolder> adapter = new FirebaseRecyclerAdapter<CartGetSet, CartViewHolder>(options) {
             @Override
@@ -64,6 +80,9 @@ public class Cart extends AppCompatActivity {
                 holder.txtProductName.setText("Product Name: " + model.getpName());
                 holder.txtProductPrice.setText("Price: " +model.getPrice());
                 holder.txtProductQuantity.setText("Quantity: " + model.getQuantity());
+
+                //float oneTypeProductPrice = Float.valueOf(model.getPrice()) * Integer.valueOf(model.getQuantity());
+              //TotalPrice += Integer.parseInt(model.getPrice());
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
