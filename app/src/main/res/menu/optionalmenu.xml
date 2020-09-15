@@ -2,6 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/action_about_us"
+        android:icon="@drawable/ic_baseline_contact_support_24"
+        android:orderInCategory="5"
+        android:title="@string/about_us"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/action_cart"
         android:icon="@drawable/ic_baseline_shopping_cart_24"
         android:orderInCategory="10"
@@ -15,6 +21,7 @@
         android:title="@string/user_account"
         app:showAsAction="ifRoom"
        />
+
 
 
 </menu>

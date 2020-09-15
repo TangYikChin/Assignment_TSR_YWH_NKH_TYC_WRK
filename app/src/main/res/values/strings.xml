@@ -44,7 +44,6 @@
     <string name="price_limited_product3">RM1629.00</string>
     <string name="fb">SYNALLAGí Home Page</string>
     <string name="email">SYNALLAGí@gmail.com</string>
-    <string name="about_us">About Us</string>
     <string name="phone">03-1111-1111</string>
     <string name="feedback">Feedback</string>
     <string name="user_account">User Account</string>
@@ -73,4 +72,5 @@
     <string name="grey_text">GREY</string>
     <string name="mosquito_killer_title">Baseus Mosquito Killer Lamp</string>
     <string name="white_text">WHITE</string>
+    <string name="about_us">About Us</string>
 </resources>

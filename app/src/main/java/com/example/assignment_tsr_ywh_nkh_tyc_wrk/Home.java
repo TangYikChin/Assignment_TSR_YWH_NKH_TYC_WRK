@@ -132,8 +132,13 @@ ImageView image1, image2, image3, image4;
             case R.id.action_cart:
                 startActivity(new Intent(getApplicationContext(), Cart.class));
                 return true;
+
+            case R.id.action_about_us:
+                startActivity(new Intent(getApplicationContext(), AboutUs.class));
+                return true;
         }
         return super.onOptionsItemSelected(item);
+
     }
 
 
