@@ -111,6 +111,8 @@ public class Clothed1Product extends AppCompatActivity implements View.OnClickLi
                 cartMap.put("price", productPrice.getText().toString());
                 cartMap.put("date", saveCurrentDate);
                 cartMap.put("time", saveCurrentTime);
+
+
                 cartMap.put("quantity", sizeno.getText().toString());
 
                 reference.child("User View").child("Product").child(productName.getText().toString()).updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
