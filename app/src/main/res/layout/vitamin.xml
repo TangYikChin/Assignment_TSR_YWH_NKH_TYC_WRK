@@ -68,6 +68,7 @@
 
 
                 <TextView
+                    android:id="@+id/price_healthcare3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -90,6 +91,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/healthcare3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
