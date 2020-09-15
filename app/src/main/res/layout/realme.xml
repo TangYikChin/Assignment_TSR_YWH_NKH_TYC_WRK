@@ -67,6 +67,7 @@
 
 
                 <TextView
+                    android:id="@+id/realmePrice"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -89,6 +90,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/realmeName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
