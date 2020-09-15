@@ -24,7 +24,7 @@ public class Register extends AppCompatActivity {
     EditText etUsername, etEmail, etPassword, etConfirmPassword, etPhone;
     FirebaseAuth fAuth;
     DatabaseReference reference;
-    User user;
+    UserGetSet userGetSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class Register extends AppCompatActivity {
         etPassword = (EditText) findViewById(R.id.etPassword);
         etConfirmPassword = (EditText) findViewById(R.id.etConfirmPassword);
         etPhone = (EditText) findViewById(R.id.etPhone);
-        user = new User();
+        userGetSet = new UserGetSet();
         fAuth = FirebaseAuth.getInstance();
         reference = FirebaseDatabase.getInstance().getReference().child("User");
 
@@ -51,14 +51,14 @@ public class Register extends AppCompatActivity {
                 String confirmPassword = etConfirmPassword.getText().toString().trim();
                 String phone = etPhone.getText().toString().trim();
 
-                user.setUsername(etUsername.getText().toString().trim());
-                user.setEmail(etEmail.getText().toString().trim());
-                user.setPassword(etPassword.getText().toString().trim());
-                user.setConfirmPassword(etConfirmPassword.getText().toString().trim());
-                user.setPhone(etPhone.getText().toString().trim());
+                userGetSet.setUsername(etUsername.getText().toString().trim());
+                userGetSet.setEmail(etEmail.getText().toString().trim());
+                userGetSet.setPassword(etPassword.getText().toString().trim());
+                userGetSet.setConfirmPassword(etConfirmPassword.getText().toString().trim());
+                userGetSet.setPhone(etPhone.getText().toString().trim());
 
 
-                reference.child(phone).setValue(user);
+                reference.child(phone).setValue(userGetSet);
                 Toast.makeText(Register.this, "Data Insert Successfully", Toast.LENGTH_SHORT).show();
 
                 if (TextUtils.isEmpty(username)){

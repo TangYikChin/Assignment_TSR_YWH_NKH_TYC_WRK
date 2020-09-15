@@ -93,6 +93,10 @@ private Toolbar toolbar;
         case R.id.user_account:
             startActivity(new Intent(getApplicationContext(), UserAcc.class));
             return true;
+
+            case R.id.action_cart:
+                startActivity(new Intent(getApplicationContext(), Cart.class));
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

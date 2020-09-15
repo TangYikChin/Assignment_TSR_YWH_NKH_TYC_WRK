@@ -25,13 +25,13 @@ import java.util.HashMap;
 
 public class Clothed1Product extends AppCompatActivity implements View.OnClickListener {
     TextView productName, productPrice;
+    EditText sizeno;
+
     Toolbar toolbar;
     Button addToChartButton;
     Button buttonM,buttonL,buttonXL;
     Button plus, minus;
-    EditText sizeno;
     RatingBar ratingBar;
-    String productID = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +43,10 @@ public class Clothed1Product extends AppCompatActivity implements View.OnClickLi
         getSupportActionBar().setTitle("Cloth Product Details");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        productID = getIntent().getStringExtra("pid");
         productName = (TextView) findViewById(R.id.cloth1Name);
         productPrice = (TextView) findViewById(R.id.cloth1Price);
+        sizeno = (EditText) findViewById(R.id.sizeno);
+
         buttonM = (Button) findViewById(R.id.button_m);
         buttonL = (Button) findViewById(R.id.button_l);
         buttonXL = (Button) findViewById(R.id.button_xl);
@@ -109,11 +110,11 @@ public class Clothed1Product extends AppCompatActivity implements View.OnClickLi
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Cart List");
 
                 final HashMap<String , Object> cartMap = new HashMap<>();
-                cartMap.put("pid", productID);
                 cartMap.put("pName", productName.getText().toString());
-                cartMap.put("p{rice", productPrice.getText().toString());
+                cartMap.put("price", productPrice.getText().toString());
                 cartMap.put("date", saveCurrentDate);
                 cartMap.put("time", saveCurrentTime);
+                cartMap.put("quantity", sizeno.getText().toString());
 
                 reference.child("User View").child("Product").updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

@@ -45,10 +45,10 @@ public class UserAcc extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                User user = dataSnapshot.getValue(User.class);
-                cgUsername.setText(user.getUsername());
-                cgEmail.setText(user.getEmail());
-                cgPhone.setText(user.getPhone());
+                UserGetSet userGetSet = dataSnapshot.getValue(UserGetSet.class);
+                cgUsername.setText(userGetSet.getUsername());
+                cgEmail.setText(userGetSet.getEmail());
+                cgPhone.setText(userGetSet.getPhone());
             }
 
             @Override
